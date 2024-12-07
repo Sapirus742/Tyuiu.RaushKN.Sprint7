@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project.V0", "Project.V0", "{4DBC68C2-417B-4445-B13A-916B011ED781}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project.V9", "Project.V9", "{4DBC68C2-417B-4445-B13A-916B011ED781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.RaushKN.Sprint7.Project.V9", "Tyuiu.RaushKN.Sprint7.Project.V9\Tyuiu.RaushKN.Sprint7.Project.V9.csproj", "{606D2C10-90FB-4A2B-97C2-606D65870EA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.RaushKN.Sprint7.Project.V9", "Tyuiu.RaushKN.Sprint7.Project.V9\Tyuiu.RaushKN.Sprint7.Project.V9.csproj", "{606D2C10-90FB-4A2B-97C2-606D65870EA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.RaushKN.Sprint7.Project.V9.Lib", "Tyuiu.RaushKN.Sprint7.Project.V9.Lib\Tyuiu.RaushKN.Sprint7.Project.V9.Lib.csproj", "{C50C3B06-BEFC-4137-A2E1-F6BCA2105468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.RaushKN.Sprint7.Project.V9.Lib", "Tyuiu.RaushKN.Sprint7.Project.V9.Lib\Tyuiu.RaushKN.Sprint7.Project.V9.Lib.csproj", "{C50C3B06-BEFC-4137-A2E1-F6BCA2105468}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.RaushKN.Sprint7.Project.V9.Test", "Tyuiu.RaushKN.Sprint7.Project.V9.Test\Tyuiu.RaushKN.Sprint7.Project.V9.Test.csproj", "{D54D2AF8-309C-403D-A73A-A9CAF476BFA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.RaushKN.Sprint7.Project.V9.Test", "Tyuiu.RaushKN.Sprint7.Project.V9.Test\Tyuiu.RaushKN.Sprint7.Project.V9.Test.csproj", "{D54D2AF8-309C-403D-A73A-A9CAF476BFA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
