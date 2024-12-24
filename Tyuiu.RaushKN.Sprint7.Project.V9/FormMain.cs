@@ -1,206 +1,334 @@
-using System.Security.Cryptography.X509Certificates;
-using System.Windows.Forms.Design.Behavior;
 using Tyuiu.RaushKN.Sprint7.Project.V9.Lib;
 
 namespace Tyuiu.RaushKN.Sprint7.Project.V9
 {
-    public partial class FormMain_RKN : Form
+    public partial class FormMain : Form
     {
         DataService ds = new DataService();
-        public List<VideoClip> videoClips = new List<VideoClip>();
-        public const string filePath = "video_clips.csv";
-        public FormMain_RKN()
+        int openedFilm = -1;
+        int sortType = 0;
+        Size defaultLabelSize;
+
+        string pathImg = $@"{Directory.GetCurrentDirectory()}\img\";
+
+        public FormMain()
         {
             InitializeComponent();
-            LoadData();
-            UpdateDataGridView();
-            this.dataGridViewVideoClips_RKN.SelectionChanged += new EventHandler(dataGridViewVideoClips_RKN_SelectionChanged);
+            UpdateFilmsButtons();
+            ds.ClearUnusedImages();
+
+            toolStripComboBoxSort_RKN.SelectedIndex = sortType;
+            defaultLabelSize = labelGenreText_RKN.Size;
+        }
+        private void buttonAdd_RKN_Click(object sender, EventArgs e)
+        {
+            FormAddFilm AddForm = new FormAddFilm();
+            AddForm.ShowDialog();
+            UpdateFilmsButtons();
         }
 
-        private void dataGridViewVideoClips_RKN_SelectionChanged(object sender, EventArgs e)
+        private void buttonDelete_RKN_Click(object sender, EventArgs e)
         {
-            if (dataGridViewVideoClips_RKN.SelectedRows.Count > 0)
+            DialogResult result = MessageBox.Show($"Вы действительно хотите удалить информацию о {labelName_RKN.Text}?", "Удаление", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Selection changed!");
-                var selectedClip = (VideoClip)dataGridViewVideoClips_RKN.SelectedRows[0].DataBoundItem;
-                // Обновление текстовых полей с данными выбранного клипа
-                textBoxCode_RKN.Text = selectedClip.Code;
-                textBoxDate_RKN.Text = selectedClip.Date.ToString("yyyy-MM-dd");
-                textBoxDuration_RKN.Text = selectedClip.Duration.ToString();
-                textBoxTheme_RKN.Text = selectedClip.Theme;
-                textBoxCost_RKN.Text = selectedClip.Cost.ToString();
-                textBoxActorLastName_RKN.Text = selectedClip.ActorLastName;
-                textBoxActorFirstName_RKN.Text = selectedClip.ActorFirstName;
-                textBoxActorPatronymic_RKN.Text = selectedClip.ActorPatronymic;
+                flowLayoutPanelLeft_RKN.Controls.Clear();
+                ds.DeleteFilm(openedFilm);
+                InfoReset();
+                UpdateFilmsButtons();
             }
         }
-
-        private void dataGridViewVideoClips_RKN_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void Search(string request)
         {
-            // Обработчик события для выбора строки
-            if (e.RowIndex >= 0)
+            flowLayoutPanelLeft_RKN.Controls.Clear();
+
+            string[] allFilmsNames = ds.GetNecessaryTypeInfo(1);
+            string[] allFilmsImages = ds.GetNecessaryTypeInfo(0);
+
+            for (int i = 0; i < allFilmsNames.Length; i++)
             {
-                var selectedClip = (VideoClip)dataGridViewVideoClips_RKN.Rows[e.RowIndex].DataBoundItem;
-                // Обновление текстовых полей с данными выбранного клипа
-                textBoxCode_RKN.Text = selectedClip.Code;
-                textBoxDate_RKN.Text = selectedClip.Date.ToString("yyyy-MM-dd");
-                textBoxDuration_RKN.Text = selectedClip.Duration.ToString();
-                textBoxTheme_RKN.Text = selectedClip.Theme;
-                textBoxCost_RKN.Text = selectedClip.Cost.ToString();
-                textBoxActorLastName_RKN.Text = selectedClip.ActorLastName;
-                textBoxActorFirstName_RKN.Text = selectedClip.ActorFirstName;
-                textBoxActorPatronymic_RKN.Text = selectedClip.ActorPatronymic;
-            }
-        }
+                string lowerFilmName = allFilmsNames[i].ToLower();
 
-        private void dataGridViewVideoClips_RKN_UserAddedRow(object sender, DataGridViewRowEventArgs e)
-        {
-            // Обработчик события для добавления строки
-            var newRow = e.Row;
-            // Обновление данных в новой строке
-            newRow.Cells["Code"].Value = textBoxCode_RKN.Text;
-            newRow.Cells["Date"].Value = textBoxDate_RKN.Text;
-            newRow.Cells["Duration"].Value = textBoxDuration_RKN.Text;
-            newRow.Cells["Theme"].Value = textBoxTheme_RKN.Text;
-            newRow.Cells["Cost"].Value = textBoxCost_RKN.Text;
-            newRow.Cells["ActorLastName"].Value = textBoxActorLastName_RKN.Text;
-            newRow.Cells["ActorFirstName"].Value = textBoxActorFirstName_RKN.Text;
-            newRow.Cells["ActorPatronymic"].Value = textBoxActorPatronymic_RKN.Text;
-        }
-
-
-
-        public void LoadData()
-        {
-            if (File.Exists(filePath))
-            {
-                var lines = File.ReadAllLines(filePath);
-                foreach (var line in lines)
+                if (lowerFilmName.Contains(request.ToLower()))
                 {
-                    var parts = line.Split(',');
-                    if (parts.Length == 7)
+                    Button newButton = CreateButton(allFilmsNames[i], i, allFilmsImages[i], i);
+                    flowLayoutPanelLeft_RKN.Controls.Add(newButton);
+                }
+            }
+
+            if (flowLayoutPanelLeft_RKN.Controls.Count == 0)
+            {
+                UpdateFilmsButtons();
+                MessageBox.Show("Запрос не найден.", "Ошибка");
+            }
+        }
+        private Button CreateButton(string filmName, int lineNum, string pathImage, int tabIndex)
+        {
+            Size buttonSize = new Size(94, 141);
+            Button openButton = new Button();
+            openButton.Size = buttonSize;
+            openButton.Text = filmName;
+            openButton.ForeColor = Color.DarkGray;
+            openButton.TextAlign = ContentAlignment.BottomCenter;
+            openButton.Name = $"buttonFilm{lineNum}_RKN";
+            try
+            {
+                openButton.BackgroundImage = Image.FromFile(pathImg + pathImage);
+            }
+            catch
+            {
+                openButton.BackgroundImage = Image.FromFile($@"{Directory.GetCurrentDirectory()}\Resources\imageLoadError.jpg");
+            }
+            openButton.BackgroundImageLayout = ImageLayout.Stretch;
+            openButton.TabIndex = tabIndex;
+            openButton.Click += new EventHandler(this.OpenFilm);
+            return openButton;
+        }
+        private void InfoReset()
+        {
+            pictureBoxPreview_RKN.Image = Image.FromFile($@"{Directory.GetCurrentDirectory()}\Resources\imagePlaceholder.jpg");
+            labelName_RKN.Text = "Выберите фильм";
+            labelCountryText_RKN.Text = "-";
+            labelScreenwriterText_RKN.Text = "-";
+            labelDirectorText_RKN.Text = "-";
+            labelGenreText_RKN.Text = "-";
+            labelRoleText_RKN.Text = "-";
+            labelRatingText_RKN.Text = "-";
+            labelYearText_RKN.Text = "-";
+            labelDescriptionText_RKN.Text = "-";
+
+            toolStripButtonDelete_RKN.Enabled = false;
+        }
+        public void UpdateFilmsButtons()
+        {
+            flowLayoutPanelLeft_RKN.Controls.Clear();
+            int filmsCount = ds.GetFilmCount();
+            if (filmsCount == 0) return;
+
+            string[] temp;
+            int[] sortedLinesNums = new int[filmsCount];
+
+            switch (sortType)
+            {
+                case 0:
+                    for (int i = 0; i < filmsCount; i++)
                     {
-                        videoClips.Add(new VideoClip
-                        {
-                            Code = parts[0],
-                            Date = DateTime.Parse(parts[1]),
-                            Duration = TimeSpan.Parse(parts[2]),
-                            Theme = parts[3],
-                            Cost = decimal.Parse(parts[4]),
-                            ActorLastName = parts[5],
-                            ActorFirstName = parts[6],
-                            ActorPatronymic = parts[7]
-                        });
+                        temp = ds.GetNecessaryFilmInfo(i);
+                        Button newButton = CreateButton(temp[1], i, temp[0], i);
+                        flowLayoutPanelLeft_RKN.Controls.Add(newButton);
                     }
-                }
+                    break;
+
+                case 1:
+                    string[] names = ds.GetNecessaryTypeInfo(1);
+                    string[] sortedNames = ds.GetNecessaryTypeInfo(1);
+                    Array.Sort(sortedNames);
+
+                    for (int i = 0; i < filmsCount; i++)
+                    {
+                        for (int j = 0; j < filmsCount; j++)
+                        {
+                            if (sortedNames[i] == names[j])
+                            {
+                                sortedLinesNums[i] = j;
+                                break;
+                            }
+                        }
+                    }
+
+                    foreach (int item in sortedLinesNums)
+                    {
+                        temp = ds.GetNecessaryFilmInfo(item);
+                        Button newButton = CreateButton(temp[1], item, temp[0], item);
+                        flowLayoutPanelLeft_RKN.Controls.Add(newButton);
+                    }
+                    break;
+
+                case 2:
+                    string[] years = ds.GetNecessaryTypeInfo(2);
+                    for (int i = 0; i < sortedLinesNums.Length; i++)
+                    {
+                        sortedLinesNums[i] = i;
+                    }
+
+                    string tempYearString;
+                    int tempYearInt;
+                    for (int i = 0; i < years.Length - 1; i++)
+                    {
+                        for (int j = i + 1; j < years.Length; j++)
+                        {
+                            if (int.Parse(years[i]) > int.Parse(years[j]))
+                            {
+                                tempYearString = years[i];
+                                years[i] = years[j];
+                                years[j] = tempYearString;
+
+                                tempYearInt = sortedLinesNums[i];
+                                sortedLinesNums[i] = sortedLinesNums[j];
+                                sortedLinesNums[j] = tempYearInt;
+                            }
+                        }
+                    }
+
+                    foreach (int item in sortedLinesNums)
+                    {
+                        temp = ds.GetNecessaryFilmInfo(item);
+                        Button newButton = CreateButton(temp[1], item, temp[0], item);
+                        flowLayoutPanelLeft_RKN.Controls.Add(newButton);
+                    }
+                    break;
             }
         }
 
-        public void SaveData()
-        {
-            using (var writer = new StreamWriter(filePath))
-            {
-                foreach (var clip in videoClips)
-                {
-                    writer.WriteLine($"{clip.Code},{clip.Date},{clip.Duration},{clip.Theme},{clip.Cost},{clip.ActorLastName},{clip.ActorFirstName},{clip.ActorPatronymic}");
-                }
-            }
-        }
 
-        private bool isUpdatingDataGridView = false;
-
-        private void UpdateDataGridView()
+        private void OpenFilm(Object sender, EventArgs e)
         {
-            if (isUpdatingDataGridView) return; // Если обновляем, выходим
+            string[] genres = { "Боевик", "Детектив", "Драма", "Исторический фильм", "Комедия", "Музыкальный фильм", "Триллер" };
+            Button b = (Button)sender;
+            toolStripButtonDelete_RKN.Enabled = true;
+            openedFilm = b.TabIndex;
+
+            string[] data = ds.GetNecessaryFilmInfo(openedFilm);
 
             try
             {
-                isUpdatingDataGridView = true; // Устанавливаем флаг
-                dataGridViewVideoClips_RKN.DataSource = null; // Сбрасываем источник данных
-                dataGridViewVideoClips_RKN.DataSource = videoClips; // Устанавливаем новый источник данных
+                pictureBoxPreview_RKN.Image = Image.FromFile(pathImg + data[0]);
             }
-            finally
+            catch
             {
-                isUpdatingDataGridView = false; // Сбрасываем флаг
+                pictureBoxPreview_RKN.Image = Image.FromFile($@"{Directory.GetCurrentDirectory()}\Resources\imageLoadError.jpg");
             }
+            labelName_RKN.Text = data[1];
+            labelYearText_RKN.Text = data[2];
+            labelGenreText_RKN.Text = genres[int.Parse(data[3])];
+            labelDirectorText_RKN.Text = data[4];
+            labelScreenwriterText_RKN.Text = data[5];
+            labelCountryText_RKN.Text = data[6];
+            labelRoleText_RKN.Text = data[8];
+            labelRatingText_RKN.Text = data[7];
+            labelDescriptionText_RKN.Text = data[9];
+
+            MoveLabels();
         }
 
-        public void buttonAddClip_Click(object sender, EventArgs e)
+
+        private void toolStripButtonAdd_RKN_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var newClip = new VideoClip
-                {
-                    Code = textBoxCode_RKN.Text,
-                    Date = DateTime.Parse(textBoxDate_RKN.Text),
-                    Duration = TimeSpan.Parse(textBoxDuration_RKN.Text),
-                    Theme = textBoxTheme_RKN.Text,
-                    Cost = decimal.Parse(textBoxCost_RKN.Text),
-                    ActorLastName = textBoxActorLastName_RKN.Text,
-                    ActorFirstName = textBoxActorFirstName_RKN.Text,
-                    ActorPatronymic = textBoxActorPatronymic_RKN.Text
-                };
-                videoClips.Add(newClip);
-                UpdateDataGridView();
-                SaveData();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при добавлении клипа: {ex.Message}");
-            }
+            FormAddFilm AddForm = new FormAddFilm();
+            AddForm.ShowDialog();
+            UpdateFilmsButtons();
         }
 
-        public void buttonEditClip_Click(Object sender, EventArgs e)
-        {
-            if (dataGridViewVideoClips_RKN.SelectedRows.Count > 0)
-            {
-                try
-                {
-                    var selectedClip = (VideoClip)dataGridViewVideoClips_RKN.SelectedRows[0].DataBoundItem;
-                    selectedClip.Code = textBoxCode_RKN.Text;
-                    selectedClip.Date = DateTime.Parse(textBoxDate_RKN.Text);
-                    selectedClip.Duration = TimeSpan.Parse(textBoxDuration_RKN.Text);
-                    selectedClip.Theme = textBoxTheme_RKN.Text;
-                    selectedClip.Cost = decimal.Parse(textBoxCost_RKN.Text);
-                    selectedClip.ActorLastName = textBoxActorLastName_RKN.Text;
-                    selectedClip.ActorFirstName = textBoxActorFirstName_RKN.Text;
-                    selectedClip.ActorPatronymic = textBoxActorPatronymic_RKN.Text;
 
-                    UpdateDataGridView();
-                    SaveData();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при редактировании клипа: {ex.Message}");
-                }
+        private void toolStripButtonDelete_RKN_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show($"Вы действительно хотите удалить информацию о {labelName_RKN.Text}?", "Удаление", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                flowLayoutPanelLeft_RKN.Controls.Clear();
+                ds.DeleteFilm(openedFilm);
+                InfoReset();
+                UpdateFilmsButtons();
             }
+
         }
 
-        public void buttonDeleteClip_Click(object sender, EventArgs e)
+
+        private void toolStripButtonSearch_RKN_Click_2(object sender, EventArgs e)
         {
-            if (dataGridViewVideoClips_RKN.SelectedRows.Count > 0)
+            string searchRequest = toolStripTextBoxSearch_RKN.Text;
+
+            if (!string.IsNullOrEmpty(searchRequest))
             {
-                var selectedClip = (VideoClip)dataGridViewVideoClips_RKN.SelectedRows[0].DataBoundItem;
-                videoClips.Remove(selectedClip);
-                UpdateDataGridView();
-                SaveData();
+                Search(searchRequest.ToLower());
             }
             else
             {
-                MessageBox.Show("Пожалуйста, выберите клип для удаления.");
+                UpdateFilmsButtons();
+                MessageBox.Show("Задан пустой поисковой запрос.", "Ошибка");
             }
         }
 
-        public class VideoClip
+        private void toolStripButtonStat_RKN_Click_3(object sender, EventArgs e)
         {
-            public string Code { get; set; }
-            public DateTime Date { get; set; }
-            public TimeSpan Duration { get; set; }
-            public string Theme { get; set; }
-            public decimal Cost { get; set; }
-            public string ActorLastName { get; set; }
-            public string ActorFirstName { get; set; }
-            public string ActorPatronymic { get; set; }
+            FormStatistics formStatistics = new FormStatistics();
+            formStatistics.ShowDialog();
+        }
+
+        private void toolStripTextBoxSearch_RKN_Enter(object sender, EventArgs e)
+        {
+            if (toolStripTextBoxSearch_RKN.Text == "Поиск...")
+            {
+                toolStripTextBoxSearch_RKN.Text = "";
+                toolStripTextBoxSearch_RKN.ForeColor = Color.Black;
+            }
+        }
+
+        private void toolStripTextBoxSearch_RKN_Leave(object sender, EventArgs e)
+        {
+            if (toolStripTextBoxSearch_RKN.Text == "")
+            {
+                toolStripTextBoxSearch_RKN.Text = "Поиск...";
+                toolStripTextBoxSearch_RKN.ForeColor = Color.Silver;
+            }
+        }
+
+        private void toolStripButtonHelp_RKN_Click(object sender, EventArgs e)
+        {
+            FormInformatoin formInformation = new FormInformatoin();
+            formInformation.ShowDialog();
+        }
+
+        private void toolStripButtonHelp_RKN_Click_1(object sender, EventArgs e)
+        {
+            FormHelp formHelp = new FormHelp();
+            formHelp.ShowDialog();
+        }
+
+
+        private Size GetLabelSize(Label neededLabel)
+        {
+            Size neededSize = new Size(neededLabel.Width, defaultLabelSize.Height);
+
+            Size result = neededLabel.GetPreferredSize(neededSize);
+            return result;
+        }
+
+        private void MoveLabels()
+        {
+            Label[] titles = { labelDirector_RKN, labelScreenwriter_RKN, labelRole_RKN, labelCountry_RKN, labelRating_RKN, labelDescription_RKN };
+            Label[] parametrs = { labelDirectorText_RKN, labelScreenwriterText_RKN, labelRoleText_RKN, labelCountryText_RKN, labelRatingText_RKN, labelDescriptionText_RKN };
+
+            for (int i = 0; i < parametrs.Length; i++)
+            {
+                Size parametrSize = new Size(parametrs[i].Width, GetLabelSize(parametrs[i]).Height);
+
+                parametrs[i].Size = parametrSize;
+
+                if (i != parametrs.Length - 1)
+                {
+                    int AxisY = parametrs[i].Location.Y + parametrs[i].Size.Height;
+                    parametrs[i + 1].Location = new Point(parametrs[i].Location.X, AxisY);
+                    titles[i + 1].Location = new Point(titles[i].Location.X, AxisY);
+                }
+            }
+
+
+        }
+
+        private void FormMain_Resize(object sender, EventArgs e)
+        {
+            MoveLabels();
+        }
+
+        private void toolStripComboBoxSort_RKN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sortType = toolStripComboBoxSort_RKN.SelectedIndex;
+            UpdateFilmsButtons();
+        }
+
+        private void panelMain_RKN_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

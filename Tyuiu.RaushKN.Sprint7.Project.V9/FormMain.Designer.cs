@@ -1,9 +1,16 @@
 ﻿namespace Tyuiu.RaushKN.Sprint7.Project.V9
 {
-    partial class FormMain_RKN
+    partial class FormMain
     {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -13,283 +20,463 @@
             base.Dispose(disposing);
         }
 
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
-            menuStripMain = new MenuStrip();
-            toolStripMain = new ToolStrip();
-            textBoxCode_RKN = new TextBox();
-            textBoxDate_RKN = new TextBox();
-            textBoxDuration_RKN = new TextBox();
-            textBoxTheme_RKN = new TextBox();
-            textBoxCost_RKN = new TextBox();
-            textBoxActorLastName_RKN = new TextBox();
-            textBoxActorFirstName_RKN = new TextBox();
-            textBoxActorPatronymic_RKN = new TextBox();
-            buttonAddClip_RKN = new Button();
-            buttonEditClip_RKN = new Button();
-            buttonDeleteClip_RKN = new Button();
-            labelCode_RKN = new Label();
-            labelDate_RKN = new Label();
-            labelDuration_RKN = new Label();
-            labelTheme_RKN = new Label();
-            labelCost_RKN = new Label();
-            labelActorLastName_RKN = new Label();
-            labelActorFirstName_RKN = new Label();
-            labelActorPatronymic_RKN = new Label();
-            dataGridViewVideoClips_RKN = new DataGridView();
-            openFileDialog_RKN = new OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewVideoClips_RKN).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            toolStripMenu_RKN = new ToolStrip();
+            toolStripButtonAdd_RKN = new ToolStripButton();
+            toolStripButtonDelete_RKN = new ToolStripButton();
+            toolStripSeparator1_RKN = new ToolStripSeparator();
+            toolStripComboBoxSort_RKN = new ToolStripComboBox();
+            toolStripSeparator2_RKN = new ToolStripSeparator();
+            toolStripButtonInformation_RKN = new ToolStripButton();
+            toolStripButtonHelp_RKN = new ToolStripButton();
+            toolStripTextBoxSearch_RKN = new ToolStripTextBox();
+            toolStripButtonSearch_RKN = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            toolStripButtonStat_RKN = new ToolStripButton();
+            flowLayoutPanelLeft_RKN = new FlowLayoutPanel();
+            labelScreenwriter_RKN = new Label();
+            labelDirector_RKN = new Label();
+            labelGenre_RKN = new Label();
+            labelYear_RKN = new Label();
+            labelYearText_RKN = new Label();
+            labelGenreText_RKN = new Label();
+            labelDirectorText_RKN = new Label();
+            labelScreenwriterText_RKN = new Label();
+            labelRoleText_RKN = new Label();
+            labelCountryText_RKN = new Label();
+            labelRatingText_RKN = new Label();
+            labelDescriptionText_RKN = new Label();
+            labelRating_RKN = new Label();
+            labelCountry_RKN = new Label();
+            labelName_RKN = new Label();
+            labelRole_RKN = new Label();
+            labelDescription_RKN = new Label();
+            pictureBoxPreview_RKN = new PictureBox();
+            panelMain_RKN = new Panel();
+            toolStripMenu_RKN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPreview_RKN).BeginInit();
+            panelMain_RKN.SuspendLayout();
             SuspendLayout();
             // 
-            // menuStripMain
+            // toolStripMenu_RKN
             // 
-            menuStripMain.Location = new Point(0, 0);
-            menuStripMain.Name = "menuStripMain";
-            menuStripMain.Size = new Size(1366, 24);
-            menuStripMain.TabIndex = 0;
-            menuStripMain.Text = "menuStripMain_RKN";
+            toolStripMenu_RKN.BackColor = Color.LightGray;
+            toolStripMenu_RKN.ImageScalingSize = new Size(20, 20);
+            toolStripMenu_RKN.Items.AddRange(new ToolStripItem[] { toolStripButtonAdd_RKN, toolStripButtonDelete_RKN, toolStripSeparator1_RKN, toolStripComboBoxSort_RKN, toolStripSeparator2_RKN, toolStripButtonInformation_RKN, toolStripButtonHelp_RKN, toolStripTextBoxSearch_RKN, toolStripButtonSearch_RKN, toolStripSeparator1, toolStripButtonStat_RKN });
+            toolStripMenu_RKN.Location = new Point(254, 0);
+            toolStripMenu_RKN.Name = "toolStripMenu_RKN";
+            toolStripMenu_RKN.Size = new Size(1127, 27);
+            toolStripMenu_RKN.TabIndex = 3;
             // 
-            // toolStripMain
+            // toolStripButtonAdd_RKN
             // 
-            toolStripMain.Location = new Point(0, 24);
-            toolStripMain.Name = "toolStripMain";
-            toolStripMain.Size = new Size(1366, 25);
-            toolStripMain.TabIndex = 1;
-            toolStripMain.Text = "toolStripMain_RKN";
+            toolStripButtonAdd_RKN.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButtonAdd_RKN.Image = Properties.Resources._1;
+            toolStripButtonAdd_RKN.ImageTransparentColor = Color.Magenta;
+            toolStripButtonAdd_RKN.Name = "toolStripButtonAdd_RKN";
+            toolStripButtonAdd_RKN.Size = new Size(24, 24);
+            toolStripButtonAdd_RKN.Text = "Добавить фильм";
+            toolStripButtonAdd_RKN.ToolTipText = "Добавить";
+            toolStripButtonAdd_RKN.Click += toolStripButtonAdd_RKN_Click;
             // 
-            // textBoxCode_RKN
+            // toolStripButtonDelete_RKN
             // 
-            textBoxCode_RKN.Location = new Point(12, 50);
-            textBoxCode_RKN.Name = "textBoxCode_RKN";
-            textBoxCode_RKN.Size = new Size(200, 23);
-            textBoxCode_RKN.TabIndex = 3;
+            toolStripButtonDelete_RKN.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButtonDelete_RKN.Enabled = false;
+            toolStripButtonDelete_RKN.Image = Properties.Resources._4;
+            toolStripButtonDelete_RKN.ImageTransparentColor = Color.Magenta;
+            toolStripButtonDelete_RKN.Name = "toolStripButtonDelete_RKN";
+            toolStripButtonDelete_RKN.Size = new Size(24, 24);
+            toolStripButtonDelete_RKN.Text = "Удалить фильм";
+            toolStripButtonDelete_RKN.ToolTipText = "Удалить";
+            toolStripButtonDelete_RKN.Click += toolStripButtonDelete_RKN_Click;
             // 
-            // textBoxDate_RKN
+            // toolStripSeparator1_RKN
             // 
-            textBoxDate_RKN.Location = new Point(220, 50);
-            textBoxDate_RKN.Name = "textBoxDate_RKN";
-            textBoxDate_RKN.Size = new Size(200, 23);
-            textBoxDate_RKN.TabIndex = 4;
+            toolStripSeparator1_RKN.Name = "toolStripSeparator1_RKN";
+            toolStripSeparator1_RKN.Size = new Size(6, 27);
             // 
-            // textBoxDuration_RKN
+            // toolStripComboBoxSort_RKN
             // 
-            textBoxDuration_RKN.Location = new Point(430, 50);
-            textBoxDuration_RKN.Name = "textBoxDuration_RKN";
-            textBoxDuration_RKN.Size = new Size(200, 23);
-            textBoxDuration_RKN.TabIndex = 5;
+            toolStripComboBoxSort_RKN.DropDownStyle = ComboBoxStyle.DropDownList;
+            toolStripComboBoxSort_RKN.Items.AddRange(new object[] { "По дате добавления", "По алфавиту", "По году выхода" });
+            toolStripComboBoxSort_RKN.Name = "toolStripComboBoxSort_RKN";
+            toolStripComboBoxSort_RKN.Size = new Size(178, 27);
+            toolStripComboBoxSort_RKN.ToolTipText = "Сортировка";
+            toolStripComboBoxSort_RKN.SelectedIndexChanged += toolStripComboBoxSort_RKN_SelectedIndexChanged;
             // 
-            // textBoxTheme_RKN
+            // toolStripSeparator2_RKN
             // 
-            textBoxTheme_RKN.Location = new Point(640, 50);
-            textBoxTheme_RKN.Name = "textBoxTheme_RKN";
-            textBoxTheme_RKN.Size = new Size(200, 23);
-            textBoxTheme_RKN.TabIndex = 6;
+            toolStripSeparator2_RKN.Name = "toolStripSeparator2_RKN";
+            toolStripSeparator2_RKN.Size = new Size(6, 27);
             // 
-            // textBoxCost_RKN
+            // toolStripButtonInformation_RKN
             // 
-            textBoxCost_RKN.Location = new Point(850, 50);
-            textBoxCost_RKN.Name = "textBoxCost_RKN";
-            textBoxCost_RKN.Size = new Size(200, 23);
-            textBoxCost_RKN.TabIndex = 7;
+            toolStripButtonInformation_RKN.Alignment = ToolStripItemAlignment.Right;
+            toolStripButtonInformation_RKN.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButtonInformation_RKN.Image = Properties.Resources.info;
+            toolStripButtonInformation_RKN.ImageTransparentColor = Color.Magenta;
+            toolStripButtonInformation_RKN.Name = "toolStripButtonInformation_RKN";
+            toolStripButtonInformation_RKN.Size = new Size(24, 24);
+            toolStripButtonInformation_RKN.Text = "Сведенья о программе";
+            toolStripButtonInformation_RKN.Click += toolStripButtonHelp_RKN_Click;
             // 
-            // textBoxActorLastName_RKN
+            // toolStripButtonHelp_RKN
             // 
-            textBoxActorLastName_RKN.Location = new Point(12, 100);
-            textBoxActorLastName_RKN.Name = "textBoxActorLastName_RKN";
-            textBoxActorLastName_RKN.Size = new Size(200, 23);
-            textBoxActorLastName_RKN.TabIndex = 8;
+            toolStripButtonHelp_RKN.Alignment = ToolStripItemAlignment.Right;
+            toolStripButtonHelp_RKN.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButtonHelp_RKN.Image = Properties.Resources.Help1;
+            toolStripButtonHelp_RKN.ImageTransparentColor = Color.Magenta;
+            toolStripButtonHelp_RKN.Name = "toolStripButtonHelp_RKN";
+            toolStripButtonHelp_RKN.Size = new Size(24, 24);
+            toolStripButtonHelp_RKN.Text = "Руководство пользователя";
+            toolStripButtonHelp_RKN.Click += toolStripButtonHelp_RKN_Click_1;
             // 
-            // textBoxActorFirstName_RKN
+            // toolStripTextBoxSearch_RKN
             // 
-            textBoxActorFirstName_RKN.Location = new Point(220, 100);
-            textBoxActorFirstName_RKN.Name = "textBoxActorFirstName_RKN";
-            textBoxActorFirstName_RKN.Size = new Size(200, 23);
-            textBoxActorFirstName_RKN.TabIndex = 9;
+            toolStripTextBoxSearch_RKN.ForeColor = SystemColors.AppWorkspace;
+            toolStripTextBoxSearch_RKN.Name = "toolStripTextBoxSearch_RKN";
+            toolStripTextBoxSearch_RKN.Size = new Size(164, 27);
+            toolStripTextBoxSearch_RKN.Text = "Поиск...";
+            toolStripTextBoxSearch_RKN.Enter += toolStripTextBoxSearch_RKN_Enter;
+            toolStripTextBoxSearch_RKN.Leave += toolStripTextBoxSearch_RKN_Leave;
             // 
-            // textBoxActorPatronymic_RKN
+            // toolStripButtonSearch_RKN
             // 
-            textBoxActorPatronymic_RKN.Location = new Point(430, 100);
-            textBoxActorPatronymic_RKN.Name = "textBoxActorPatronymic_RKN";
-            textBoxActorPatronymic_RKN.Size = new Size(200, 23);
-            textBoxActorPatronymic_RKN.TabIndex = 10;
+            toolStripButtonSearch_RKN.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButtonSearch_RKN.Image = Properties.Resources.Search;
+            toolStripButtonSearch_RKN.ImageTransparentColor = Color.Magenta;
+            toolStripButtonSearch_RKN.Name = "toolStripButtonSearch_RKN";
+            toolStripButtonSearch_RKN.Size = new Size(24, 24);
+            toolStripButtonSearch_RKN.Text = "Поиск фильма";
+            toolStripButtonSearch_RKN.ToolTipText = "Поиск";
+            toolStripButtonSearch_RKN.Click += toolStripButtonSearch_RKN_Click_2;
             // 
-            // buttonAddClip_RKN
+            // toolStripSeparator1
             // 
-            buttonAddClip_RKN.Location = new Point(640, 100);
-            buttonAddClip_RKN.Name = "buttonAddClip_RKN";
-            buttonAddClip_RKN.Size = new Size(75, 23);
-            buttonAddClip_RKN.TabIndex = 11;
-            buttonAddClip_RKN.Text = "Добавить";
-            buttonAddClip_RKN.UseVisualStyleBackColor = true;
-            buttonAddClip_RKN.Click += buttonAddClip_Click;
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 27);
             // 
-            // buttonEditClip_RKN
+            // toolStripButtonStat_RKN
             // 
-            buttonEditClip_RKN.Location = new Point(730, 100);
-            buttonEditClip_RKN.Name = "buttonEditClip_RKN";
-            buttonEditClip_RKN.Size = new Size(75, 23);
-            buttonEditClip_RKN.TabIndex = 12;
-            buttonEditClip_RKN.Text = "Редактировать";
-            buttonEditClip_RKN.UseVisualStyleBackColor = true;
-            buttonEditClip_RKN.Click += buttonEditClip_Click;
+            toolStripButtonStat_RKN.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButtonStat_RKN.Image = Properties.Resources.stats;
+            toolStripButtonStat_RKN.ImageTransparentColor = Color.Magenta;
+            toolStripButtonStat_RKN.Name = "toolStripButtonStat_RKN";
+            toolStripButtonStat_RKN.Size = new Size(24, 24);
+            toolStripButtonStat_RKN.Text = "Статистика по жанрам";
+            toolStripButtonStat_RKN.Click += toolStripButtonStat_RKN_Click_3;
             // 
-            // buttonDeleteClip_RKN
+            // flowLayoutPanelLeft_RKN
             // 
-            buttonDeleteClip_RKN.Location = new Point(820, 100);
-            buttonDeleteClip_RKN.Name = "buttonDeleteClip_RKN";
-            buttonDeleteClip_RKN.Size = new Size(75, 23);
-            buttonDeleteClip_RKN.TabIndex = 13;
-            buttonDeleteClip_RKN.Text = "Удалить";
-            buttonDeleteClip_RKN.UseVisualStyleBackColor = true;
-            buttonDeleteClip_RKN.Click += buttonDeleteClip_Click;
+            flowLayoutPanelLeft_RKN.AutoScroll = true;
+            flowLayoutPanelLeft_RKN.BackColor = SystemColors.ControlLight;
+            flowLayoutPanelLeft_RKN.Dock = DockStyle.Left;
+            flowLayoutPanelLeft_RKN.Location = new Point(0, 0);
+            flowLayoutPanelLeft_RKN.Margin = new Padding(2);
+            flowLayoutPanelLeft_RKN.Name = "flowLayoutPanelLeft_RKN";
+            flowLayoutPanelLeft_RKN.Size = new Size(254, 647);
+            flowLayoutPanelLeft_RKN.TabIndex = 1;
             // 
-            // labelCode_RKN
+            // labelScreenwriter_RKN
             // 
-            labelCode_RKN.AutoSize = true;
-            labelCode_RKN.Location = new Point(12, 34);
-            labelCode_RKN.Name = "labelCode_RKN";
-            labelCode_RKN.Size = new Size(30, 15);
-            labelCode_RKN.TabIndex = 14;
-            labelCode_RKN.Text = "Код:";
+            labelScreenwriter_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelScreenwriter_RKN.Location = new Point(308, 140);
+            labelScreenwriter_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelScreenwriter_RKN.Name = "labelScreenwriter_RKN";
+            labelScreenwriter_RKN.Size = new Size(131, 28);
+            labelScreenwriter_RKN.TabIndex = 9;
+            labelScreenwriter_RKN.Text = "Сценарист:";
+            labelScreenwriter_RKN.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // labelDate_RKN
+            // labelDirector_RKN
             // 
-            labelDate_RKN.AutoSize = true;
-            labelDate_RKN.Location = new Point(220, 34);
-            labelDate_RKN.Name = "labelDate_RKN";
-            labelDate_RKN.Size = new Size(35, 15);
-            labelDate_RKN.TabIndex = 15;
-            labelDate_RKN.Text = "Дата:";
+            labelDirector_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelDirector_RKN.Location = new Point(308, 112);
+            labelDirector_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelDirector_RKN.Name = "labelDirector_RKN";
+            labelDirector_RKN.Size = new Size(131, 28);
+            labelDirector_RKN.TabIndex = 8;
+            labelDirector_RKN.Text = "Режессер:";
+            labelDirector_RKN.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // labelDuration_RKN
+            // labelGenre_RKN
             // 
-            labelDuration_RKN.AutoSize = true;
-            labelDuration_RKN.Location = new Point(430, 34);
-            labelDuration_RKN.Name = "labelDuration_RKN";
-            labelDuration_RKN.Size = new Size(87, 15);
-            labelDuration_RKN.TabIndex = 16;
-            labelDuration_RKN.Text = "Длительность:";
+            labelGenre_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelGenre_RKN.Location = new Point(308, 85);
+            labelGenre_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelGenre_RKN.Name = "labelGenre_RKN";
+            labelGenre_RKN.Size = new Size(131, 28);
+            labelGenre_RKN.TabIndex = 7;
+            labelGenre_RKN.Text = "Жанр:";
+            labelGenre_RKN.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // labelTheme_RKN
+            // labelYear_RKN
             // 
-            labelTheme_RKN.AutoSize = true;
-            labelTheme_RKN.Location = new Point(640, 34);
-            labelTheme_RKN.Name = "labelTheme_RKN";
-            labelTheme_RKN.Size = new Size(38, 15);
-            labelTheme_RKN.TabIndex = 17;
-            labelTheme_RKN.Text = "Тема:";
+            labelYear_RKN.AutoSize = true;
+            labelYear_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelYear_RKN.Location = new Point(79, 362);
+            labelYear_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelYear_RKN.Name = "labelYear_RKN";
+            labelYear_RKN.Size = new Size(49, 24);
+            labelYear_RKN.TabIndex = 6;
+            labelYear_RKN.Text = "Год:";
             // 
-            // labelCost_RKN
+            // labelYearText_RKN
             // 
-            labelCost_RKN.AutoSize = true;
-            labelCost_RKN.Location = new Point(850, 34);
-            labelCost_RKN.Name = "labelCost_RKN";
-            labelCost_RKN.Size = new Size(70, 15);
-            labelCost_RKN.TabIndex = 18;
-            labelCost_RKN.Text = "Стоимость:";
+            labelYearText_RKN.AutoSize = true;
+            labelYearText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelYearText_RKN.Location = new Point(130, 362);
+            labelYearText_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelYearText_RKN.Name = "labelYearText_RKN";
+            labelYearText_RKN.Size = new Size(16, 24);
+            labelYearText_RKN.TabIndex = 10;
+            labelYearText_RKN.Text = "-";
             // 
-            // labelActorLastName_RKN
+            // labelGenreText_RKN
             // 
-            labelActorLastName_RKN.AutoSize = true;
-            labelActorLastName_RKN.Location = new Point(12, 84);
-            labelActorLastName_RKN.Name = "labelActorLastName_RKN";
-            labelActorLastName_RKN.Size = new Size(100, 15);
-            labelActorLastName_RKN.TabIndex = 19;
-            labelActorLastName_RKN.Text = "Фамилия актёра:";
+            labelGenreText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelGenreText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelGenreText_RKN.Location = new Point(436, 84);
+            labelGenreText_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelGenreText_RKN.Name = "labelGenreText_RKN";
+            labelGenreText_RKN.Size = new Size(678, 28);
+            labelGenreText_RKN.TabIndex = 11;
+            labelGenreText_RKN.Text = "-";
+            labelGenreText_RKN.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // labelActorFirstName_RKN
+            // labelDirectorText_RKN
             // 
-            labelActorFirstName_RKN.AutoSize = true;
-            labelActorFirstName_RKN.Location = new Point(220, 84);
-            labelActorFirstName_RKN.Name = "labelActorFirstName_RKN";
-            labelActorFirstName_RKN.Size = new Size(73, 15);
-            labelActorFirstName_RKN.TabIndex = 20;
-            labelActorFirstName_RKN.Text = "Имя актёра:";
+            labelDirectorText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelDirectorText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelDirectorText_RKN.Location = new Point(436, 112);
+            labelDirectorText_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelDirectorText_RKN.Name = "labelDirectorText_RKN";
+            labelDirectorText_RKN.Size = new Size(678, 28);
+            labelDirectorText_RKN.TabIndex = 12;
+            labelDirectorText_RKN.Text = "-";
+            labelDirectorText_RKN.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // labelActorPatronymic_RKN
+            // labelScreenwriterText_RKN
             // 
-            labelActorPatronymic_RKN.AutoSize = true;
-            labelActorPatronymic_RKN.Location = new Point(430, 84);
-            labelActorPatronymic_RKN.Name = "labelActorPatronymic_RKN";
-            labelActorPatronymic_RKN.Size = new Size(85, 13);
-            labelActorPatronymic_RKN.TabIndex = 21;
-            labelActorPatronymic_RKN.Text = "Отчество актёра:";
+            labelScreenwriterText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelScreenwriterText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelScreenwriterText_RKN.Location = new Point(436, 140);
+            labelScreenwriterText_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelScreenwriterText_RKN.Name = "labelScreenwriterText_RKN";
+            labelScreenwriterText_RKN.Size = new Size(678, 28);
+            labelScreenwriterText_RKN.TabIndex = 13;
+            labelScreenwriterText_RKN.Text = "-";
+            labelScreenwriterText_RKN.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // dataGridViewVideoClips_RKN
+            // labelRoleText_RKN
             // 
-            dataGridViewVideoClips_RKN.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewVideoClips_RKN.Location = new Point(12, 150);
-            dataGridViewVideoClips_RKN.Name = "dataGridViewVideoClips_RKN";
-            dataGridViewVideoClips_RKN.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewVideoClips_RKN.Size = new Size(1342, 600);
-            dataGridViewVideoClips_RKN.TabIndex = 2;
-            dataGridViewVideoClips_RKN.CellClick += dataGridViewVideoClips_RKN_CellClick;
-            dataGridViewVideoClips_RKN.SelectionChanged += buttonEditClip_Click;
-            dataGridViewVideoClips_RKN.UserAddedRow += dataGridViewVideoClips_RKN_UserAddedRow;
+            labelRoleText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelRoleText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelRoleText_RKN.Location = new Point(436, 167);
+            labelRoleText_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelRoleText_RKN.Name = "labelRoleText_RKN";
+            labelRoleText_RKN.Size = new Size(678, 28);
+            labelRoleText_RKN.TabIndex = 14;
+            labelRoleText_RKN.Text = "-";
+            labelRoleText_RKN.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // openFileDialog_RKN
+            // labelCountryText_RKN
             // 
-            openFileDialog_RKN.FileName = "openFileDialog_RKN";
+            labelCountryText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelCountryText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelCountryText_RKN.Location = new Point(436, 194);
+            labelCountryText_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelCountryText_RKN.Name = "labelCountryText_RKN";
+            labelCountryText_RKN.Size = new Size(678, 28);
+            labelCountryText_RKN.TabIndex = 15;
+            labelCountryText_RKN.Text = "-";
+            labelCountryText_RKN.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // FormMain_RKN
+            // labelRatingText_RKN
             // 
-            ClientSize = new Size(1366, 768);
-            Controls.Add(labelActorFirstName_RKN);
-            Controls.Add(labelActorLastName_RKN);
-            Controls.Add(labelCost_RKN);
-            Controls.Add(labelTheme_RKN);
-            Controls.Add(labelDuration_RKN);
-            Controls.Add(labelDate_RKN);
-            Controls.Add(labelCode_RKN);
-            Controls.Add(buttonDeleteClip_RKN);
-            Controls.Add(buttonEditClip_RKN);
-            Controls.Add(buttonAddClip_RKN);
-            Controls.Add(textBoxActorPatronymic_RKN);
-            Controls.Add(textBoxActorFirstName_RKN);
-            Controls.Add(textBoxActorLastName_RKN);
-            Controls.Add(textBoxCost_RKN);
-            Controls.Add(textBoxTheme_RKN);
-            Controls.Add(textBoxDuration_RKN);
-            Controls.Add(textBoxDate_RKN);
-            Controls.Add(textBoxCode_RKN);
-            Controls.Add(dataGridViewVideoClips_RKN);
-            Controls.Add(toolStripMain);
-            Controls.Add(menuStripMain);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MainMenuStrip = menuStripMain;
-            MaximizeBox = false;
-            Name = "FormMain_RKN";
+            labelRatingText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelRatingText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelRatingText_RKN.Location = new Point(436, 220);
+            labelRatingText_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelRatingText_RKN.Name = "labelRatingText_RKN";
+            labelRatingText_RKN.Size = new Size(678, 28);
+            labelRatingText_RKN.TabIndex = 16;
+            labelRatingText_RKN.Text = "-";
+            labelRatingText_RKN.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // labelDescriptionText_RKN
+            // 
+            labelDescriptionText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelDescriptionText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelDescriptionText_RKN.Location = new Point(436, 248);
+            labelDescriptionText_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelDescriptionText_RKN.Name = "labelDescriptionText_RKN";
+            labelDescriptionText_RKN.Size = new Size(678, 28);
+            labelDescriptionText_RKN.TabIndex = 17;
+            labelDescriptionText_RKN.Text = "-";
+            // 
+            // labelRating_RKN
+            // 
+            labelRating_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelRating_RKN.Location = new Point(308, 220);
+            labelRating_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelRating_RKN.Name = "labelRating_RKN";
+            labelRating_RKN.Size = new Size(131, 28);
+            labelRating_RKN.TabIndex = 12;
+            labelRating_RKN.Text = "Оценка:";
+            labelRating_RKN.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // labelCountry_RKN
+            // 
+            labelCountry_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelCountry_RKN.Location = new Point(308, 194);
+            labelCountry_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelCountry_RKN.Name = "labelCountry_RKN";
+            labelCountry_RKN.Size = new Size(131, 28);
+            labelCountry_RKN.TabIndex = 11;
+            labelCountry_RKN.Text = "Страна:";
+            labelCountry_RKN.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // labelName_RKN
+            // 
+            labelName_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelName_RKN.AutoEllipsis = true;
+            labelName_RKN.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelName_RKN.Location = new Point(261, 10);
+            labelName_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelName_RKN.Name = "labelName_RKN";
+            labelName_RKN.Size = new Size(853, 46);
+            labelName_RKN.TabIndex = 5;
+            labelName_RKN.Text = "Выберите видеоклип";
+            labelName_RKN.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelRole_RKN
+            // 
+            labelRole_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelRole_RKN.Location = new Point(308, 167);
+            labelRole_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelRole_RKN.Name = "labelRole_RKN";
+            labelRole_RKN.Size = new Size(131, 28);
+            labelRole_RKN.TabIndex = 10;
+            labelRole_RKN.Text = "В ролях:";
+            labelRole_RKN.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // labelDescription_RKN
+            // 
+            labelDescription_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelDescription_RKN.Location = new Point(308, 248);
+            labelDescription_RKN.Margin = new Padding(2, 0, 2, 0);
+            labelDescription_RKN.Name = "labelDescription_RKN";
+            labelDescription_RKN.Size = new Size(131, 28);
+            labelDescription_RKN.TabIndex = 13;
+            labelDescription_RKN.Text = "Описание:";
+            labelDescription_RKN.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // pictureBoxPreview_RKN
+            // 
+            pictureBoxPreview_RKN.BackColor = SystemColors.ActiveCaption;
+            pictureBoxPreview_RKN.Image = (Image)resources.GetObject("pictureBoxPreview_RKN.Image");
+            pictureBoxPreview_RKN.Location = new Point(23, 10);
+            pictureBoxPreview_RKN.Margin = new Padding(2);
+            pictureBoxPreview_RKN.Name = "pictureBoxPreview_RKN";
+            pictureBoxPreview_RKN.Size = new Size(233, 340);
+            pictureBoxPreview_RKN.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxPreview_RKN.TabIndex = 2;
+            pictureBoxPreview_RKN.TabStop = false;
+            // 
+            // panelMain_RKN
+            // 
+            panelMain_RKN.AutoScroll = true;
+            panelMain_RKN.Controls.Add(labelName_RKN);
+            panelMain_RKN.Controls.Add(labelYearText_RKN);
+            panelMain_RKN.Controls.Add(labelGenreText_RKN);
+            panelMain_RKN.Controls.Add(labelDescription_RKN);
+            panelMain_RKN.Controls.Add(labelDirectorText_RKN);
+            panelMain_RKN.Controls.Add(labelYear_RKN);
+            panelMain_RKN.Controls.Add(labelGenre_RKN);
+            panelMain_RKN.Controls.Add(pictureBoxPreview_RKN);
+            panelMain_RKN.Controls.Add(labelScreenwriterText_RKN);
+            panelMain_RKN.Controls.Add(labelRole_RKN);
+            panelMain_RKN.Controls.Add(labelDirector_RKN);
+            panelMain_RKN.Controls.Add(labelRoleText_RKN);
+            panelMain_RKN.Controls.Add(labelCountry_RKN);
+            panelMain_RKN.Controls.Add(labelScreenwriter_RKN);
+            panelMain_RKN.Controls.Add(labelRating_RKN);
+            panelMain_RKN.Controls.Add(labelCountryText_RKN);
+            panelMain_RKN.Controls.Add(labelRatingText_RKN);
+            panelMain_RKN.Controls.Add(labelDescriptionText_RKN);
+            panelMain_RKN.Dock = DockStyle.Fill;
+            panelMain_RKN.Location = new Point(254, 27);
+            panelMain_RKN.Margin = new Padding(4, 3, 4, 3);
+            panelMain_RKN.Name = "panelMain_RKN";
+            panelMain_RKN.Size = new Size(1127, 620);
+            panelMain_RKN.TabIndex = 18;
+            panelMain_RKN.Paint += panelMain_RKN_Paint;
+            // 
+            // FormMain
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1381, 647);
+            Controls.Add(panelMain_RKN);
+            Controls.Add(toolStripMenu_RKN);
+            Controls.Add(flowLayoutPanelLeft_RKN);
+            Margin = new Padding(2);
+            MinimumSize = new Size(1164, 571);
+            Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Каталог видео клипов";
-            ((System.ComponentModel.ISupportInitialize)dataGridViewVideoClips_RKN).EndInit();
+            Text = "Спринт 7 | Проект | Вариант 9 | Рауш К.Н.";
+            Resize += FormMain_Resize;
+            toolStripMenu_RKN.ResumeLayout(false);
+            toolStripMenu_RKN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPreview_RKN).EndInit();
+            panelMain_RKN.ResumeLayout(false);
+            panelMain_RKN.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        private System.Windows.Forms.MenuStrip menuStripMain;
-        private System.Windows.Forms.ToolStrip toolStripMain;
-        private System.Windows.Forms.TextBox textBoxCode_RKN;
-        private System.Windows.Forms.TextBox textBoxDate_RKN;
-        private System.Windows.Forms.TextBox textBoxDuration_RKN;
-        private System.Windows.Forms.TextBox textBoxTheme_RKN;
-        private System.Windows.Forms.TextBox textBoxCost_RKN;
-        private System.Windows.Forms.TextBox textBoxActorLastName_RKN;
-        private System.Windows.Forms.TextBox textBoxActorFirstName_RKN;
-        private System.Windows.Forms.TextBox textBoxActorPatronymic_RKN;
-        private System.Windows.Forms.Button buttonEditClip_RKN;
-        private System.Windows.Forms.Button buttonDeleteClip_RKN;
-        private System.Windows.Forms.Button buttonAddClip_RKN;
-        private System.Windows.Forms.Label labelCode_RKN;
-        private System.Windows.Forms.Label labelDate_RKN;
-        private System.Windows.Forms.Label labelDuration_RKN;
-        private System.Windows.Forms.Label labelTheme_RKN;
-        private System.Windows.Forms.Label labelCost_RKN;
-        private System.Windows.Forms.Label labelActorLastName_RKN;
-        private System.Windows.Forms.Label labelActorFirstName_RKN;
-        private System.Windows.Forms.Label labelActorPatronymic_RKN;
-        private new SizeF AutoScaleDimensions;
-        private new AutoScaleMode AutoScaleMode;
-        private DataGridView dataGridViewVideoClips_RKN;
-        private OpenFileDialog openFileDialog_RKN;
+        #endregion
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelLeft_RKN;
+        private System.Windows.Forms.Label labelScreenwriter_RKN;
+        private System.Windows.Forms.Label labelDirector_RKN;
+        private System.Windows.Forms.Label labelGenre_RKN;
+        private System.Windows.Forms.Label labelYear_RKN;
+        private System.Windows.Forms.PictureBox pictureBoxPreview_RKN;
+        private System.Windows.Forms.Label labelYearText_RKN;
+        private System.Windows.Forms.Label labelGenreText_RKN;
+        private System.Windows.Forms.Label labelDirectorText_RKN;
+        private System.Windows.Forms.Label labelScreenwriterText_RKN;
+        private System.Windows.Forms.Label labelRoleText_RKN;
+        private System.Windows.Forms.Label labelCountryText_RKN;
+        private System.Windows.Forms.Label labelRatingText_RKN;
+        private System.Windows.Forms.Label labelDescriptionText_RKN;
+        private System.Windows.Forms.Label labelRating_RKN;
+        private System.Windows.Forms.Label labelCountry_RKN;
+        private System.Windows.Forms.Label labelName_RKN;
+        private System.Windows.Forms.Label labelRole_RKN;
+        private System.Windows.Forms.Label labelDescription_RKN;
+        private System.Windows.Forms.ToolStrip toolStripMenu_RKN;
+        private System.Windows.Forms.ToolStripButton toolStripButtonAdd_RKN;
+        private System.Windows.Forms.ToolStripButton toolStripButtonDelete_RKN;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1_RKN;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxSearch_RKN;
+        private System.Windows.Forms.ToolStripButton toolStripButtonSearch_RKN;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2_RKN;
+        private System.Windows.Forms.ToolStripButton toolStripButtonStat_RKN;
+        private System.Windows.Forms.ToolStripButton toolStripButtonInformation_RKN;
+        private System.Windows.Forms.ToolStripButton toolStripButtonHelp_RKN;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxSort_RKN;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Panel panelMain_RKN;
     }
 }

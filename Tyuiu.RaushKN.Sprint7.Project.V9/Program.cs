@@ -10,7 +10,7 @@ namespace Tyuiu.RaushKN.Sprint7.Project.V9
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain_RKN());
+            Application.Run(new FormMain());
         }
     }
 }
