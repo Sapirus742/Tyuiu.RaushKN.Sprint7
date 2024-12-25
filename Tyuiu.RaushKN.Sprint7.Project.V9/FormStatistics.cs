@@ -32,7 +32,7 @@ namespace Tyuiu.RaushKN.Sprint7.Project.V9
             chartGenreStatistics_RKN.ChartAreas[0].AxisX.Title = "Жанры";
             chartGenreStatistics_RKN.ChartAreas[0].AxisY.Title = "Количество фильмов";
 
-            string[] genres = { "Боевик", "Детектив", "Драма", "Исторический фильм", "Комедия", "Музыкальный фильм", "Трейлер" };
+            string[] genres = { "Боевик", "Детектив", "Драма", "Исторический фильм", "Комедия", "Мюзикл", "Фантастика", "Хоррор", "Романтика" };
             int[] genreStats = ds.GetGenreStatistics();
 
             for (int i = 0; i < genres.Length; i++)

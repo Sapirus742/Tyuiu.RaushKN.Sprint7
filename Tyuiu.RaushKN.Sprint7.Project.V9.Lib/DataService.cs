@@ -118,7 +118,7 @@ namespace Tyuiu.RaushKN.Sprint7.Project.V9.Lib
 
         public int[] GetGenreStatistics()
         {
-            int[] result = new int[7];
+            int[] result = new int[9];
             int filmCount = GetFilmCount();
 
             for (int i = 0; i < filmCount; i++)

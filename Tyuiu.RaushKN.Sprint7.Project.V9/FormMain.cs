@@ -9,7 +9,7 @@ namespace Tyuiu.RaushKN.Sprint7.Project.V9
         int sortType = 0;
         Size defaultLabelSize;
 
-        string pathImg = $@"{Directory.GetCurrentDirectory()}\img\";
+        string pathImg = $@"{Directory.GetCurrentDirectory()}\image\";
 
         public FormMain()
         {
@@ -68,7 +68,7 @@ namespace Tyuiu.RaushKN.Sprint7.Project.V9
             Button openButton = new Button();
             openButton.Size = buttonSize;
             openButton.Text = filmName;
-            openButton.ForeColor = Color.DarkGray;
+            openButton.ForeColor = Color.Black;
             openButton.TextAlign = ContentAlignment.BottomCenter;
             openButton.Name = $"buttonFilm{lineNum}_RKN";
             try
@@ -183,7 +183,7 @@ namespace Tyuiu.RaushKN.Sprint7.Project.V9
 
         private void OpenFilm(Object sender, EventArgs e)
         {
-            string[] genres = { "Боевик", "Детектив", "Драма", "Исторический фильм", "Комедия", "Музыкальный фильм", "Триллер" };
+            string[] genres = { "Боевик", "Детектив", "Драма", "Исторический фильм", "Комедия", "Мюзикл", "Фантастика", "Хоррор", "Романтика"};
             Button b = (Button)sender;
             toolStripButtonDelete_RKN.Enabled = true;
             openedFilm = b.TabIndex;

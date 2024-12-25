@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             toolStripMenu_RKN = new ToolStrip();
             toolStripButtonAdd_RKN = new ToolStripButton();
@@ -61,6 +62,7 @@
             labelDescription_RKN = new Label();
             pictureBoxPreview_RKN = new PictureBox();
             panelMain_RKN = new Panel();
+            toolTip_RKN = new ToolTip(components);
             toolStripMenu_RKN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPreview_RKN).BeginInit();
             panelMain_RKN.SuspendLayout();
@@ -68,12 +70,12 @@
             // 
             // toolStripMenu_RKN
             // 
-            toolStripMenu_RKN.BackColor = Color.LightGray;
+            toolStripMenu_RKN.BackColor = Color.Gray;
             toolStripMenu_RKN.ImageScalingSize = new Size(20, 20);
             toolStripMenu_RKN.Items.AddRange(new ToolStripItem[] { toolStripButtonAdd_RKN, toolStripButtonDelete_RKN, toolStripSeparator1_RKN, toolStripComboBoxSort_RKN, toolStripSeparator2_RKN, toolStripButtonInformation_RKN, toolStripButtonHelp_RKN, toolStripTextBoxSearch_RKN, toolStripButtonSearch_RKN, toolStripSeparator1, toolStripButtonStat_RKN });
-            toolStripMenu_RKN.Location = new Point(254, 0);
+            toolStripMenu_RKN.Location = new Point(0, 0);
             toolStripMenu_RKN.Name = "toolStripMenu_RKN";
-            toolStripMenu_RKN.Size = new Size(1127, 27);
+            toolStripMenu_RKN.Size = new Size(848, 27);
             toolStripMenu_RKN.TabIndex = 3;
             // 
             // toolStripButtonAdd_RKN
@@ -178,12 +180,12 @@
             // flowLayoutPanelLeft_RKN
             // 
             flowLayoutPanelLeft_RKN.AutoScroll = true;
-            flowLayoutPanelLeft_RKN.BackColor = SystemColors.ControlLight;
-            flowLayoutPanelLeft_RKN.Dock = DockStyle.Left;
-            flowLayoutPanelLeft_RKN.Location = new Point(0, 0);
+            flowLayoutPanelLeft_RKN.BackColor = Color.White;
+            flowLayoutPanelLeft_RKN.Dock = DockStyle.Right;
+            flowLayoutPanelLeft_RKN.Location = new Point(848, 0);
             flowLayoutPanelLeft_RKN.Margin = new Padding(2);
             flowLayoutPanelLeft_RKN.Name = "flowLayoutPanelLeft_RKN";
-            flowLayoutPanelLeft_RKN.Size = new Size(254, 647);
+            flowLayoutPanelLeft_RKN.Size = new Size(300, 532);
             flowLayoutPanelLeft_RKN.TabIndex = 1;
             // 
             // labelScreenwriter_RKN
@@ -245,10 +247,10 @@
             // 
             labelGenreText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelGenreText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelGenreText_RKN.Location = new Point(436, 84);
+            labelGenreText_RKN.Location = new Point(436, 85);
             labelGenreText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelGenreText_RKN.Name = "labelGenreText_RKN";
-            labelGenreText_RKN.Size = new Size(678, 28);
+            labelGenreText_RKN.Size = new Size(399, 28);
             labelGenreText_RKN.TabIndex = 11;
             labelGenreText_RKN.Text = "-";
             labelGenreText_RKN.TextAlign = ContentAlignment.MiddleLeft;
@@ -260,7 +262,7 @@
             labelDirectorText_RKN.Location = new Point(436, 112);
             labelDirectorText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelDirectorText_RKN.Name = "labelDirectorText_RKN";
-            labelDirectorText_RKN.Size = new Size(678, 28);
+            labelDirectorText_RKN.Size = new Size(399, 28);
             labelDirectorText_RKN.TabIndex = 12;
             labelDirectorText_RKN.Text = "-";
             labelDirectorText_RKN.TextAlign = ContentAlignment.MiddleLeft;
@@ -272,7 +274,7 @@
             labelScreenwriterText_RKN.Location = new Point(436, 140);
             labelScreenwriterText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelScreenwriterText_RKN.Name = "labelScreenwriterText_RKN";
-            labelScreenwriterText_RKN.Size = new Size(678, 28);
+            labelScreenwriterText_RKN.Size = new Size(399, 28);
             labelScreenwriterText_RKN.TabIndex = 13;
             labelScreenwriterText_RKN.Text = "-";
             labelScreenwriterText_RKN.TextAlign = ContentAlignment.MiddleLeft;
@@ -284,7 +286,7 @@
             labelRoleText_RKN.Location = new Point(436, 167);
             labelRoleText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelRoleText_RKN.Name = "labelRoleText_RKN";
-            labelRoleText_RKN.Size = new Size(678, 28);
+            labelRoleText_RKN.Size = new Size(399, 28);
             labelRoleText_RKN.TabIndex = 14;
             labelRoleText_RKN.Text = "-";
             labelRoleText_RKN.TextAlign = ContentAlignment.MiddleLeft;
@@ -296,7 +298,7 @@
             labelCountryText_RKN.Location = new Point(436, 194);
             labelCountryText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelCountryText_RKN.Name = "labelCountryText_RKN";
-            labelCountryText_RKN.Size = new Size(678, 28);
+            labelCountryText_RKN.Size = new Size(399, 28);
             labelCountryText_RKN.TabIndex = 15;
             labelCountryText_RKN.Text = "-";
             labelCountryText_RKN.TextAlign = ContentAlignment.MiddleLeft;
@@ -308,7 +310,7 @@
             labelRatingText_RKN.Location = new Point(436, 220);
             labelRatingText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelRatingText_RKN.Name = "labelRatingText_RKN";
-            labelRatingText_RKN.Size = new Size(678, 28);
+            labelRatingText_RKN.Size = new Size(399, 28);
             labelRatingText_RKN.TabIndex = 16;
             labelRatingText_RKN.Text = "-";
             labelRatingText_RKN.TextAlign = ContentAlignment.MiddleLeft;
@@ -320,7 +322,7 @@
             labelDescriptionText_RKN.Location = new Point(436, 248);
             labelDescriptionText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelDescriptionText_RKN.Name = "labelDescriptionText_RKN";
-            labelDescriptionText_RKN.Size = new Size(678, 28);
+            labelDescriptionText_RKN.Size = new Size(399, 28);
             labelDescriptionText_RKN.TabIndex = 17;
             labelDescriptionText_RKN.Text = "-";
             // 
@@ -351,10 +353,10 @@
             labelName_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelName_RKN.AutoEllipsis = true;
             labelName_RKN.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelName_RKN.Location = new Point(261, 10);
+            labelName_RKN.Location = new Point(260, 10);
             labelName_RKN.Margin = new Padding(2, 0, 2, 0);
             labelName_RKN.Name = "labelName_RKN";
-            labelName_RKN.Size = new Size(853, 46);
+            labelName_RKN.Size = new Size(574, 46);
             labelName_RKN.TabIndex = 5;
             labelName_RKN.Text = "Выберите видеоклип";
             labelName_RKN.TextAlign = ContentAlignment.MiddleCenter;
@@ -383,7 +385,7 @@
             // 
             // pictureBoxPreview_RKN
             // 
-            pictureBoxPreview_RKN.BackColor = SystemColors.ActiveCaption;
+            pictureBoxPreview_RKN.BackColor = Color.FromArgb(255, 224, 192);
             pictureBoxPreview_RKN.Image = (Image)resources.GetObject("pictureBoxPreview_RKN.Image");
             pictureBoxPreview_RKN.Location = new Point(23, 10);
             pictureBoxPreview_RKN.Margin = new Padding(2);
@@ -396,6 +398,7 @@
             // panelMain_RKN
             // 
             panelMain_RKN.AutoScroll = true;
+            panelMain_RKN.BackColor = Color.FromArgb(224, 224, 224);
             panelMain_RKN.Controls.Add(labelName_RKN);
             panelMain_RKN.Controls.Add(labelYearText_RKN);
             panelMain_RKN.Controls.Add(labelGenreText_RKN);
@@ -415,10 +418,10 @@
             panelMain_RKN.Controls.Add(labelRatingText_RKN);
             panelMain_RKN.Controls.Add(labelDescriptionText_RKN);
             panelMain_RKN.Dock = DockStyle.Fill;
-            panelMain_RKN.Location = new Point(254, 27);
+            panelMain_RKN.Location = new Point(0, 27);
             panelMain_RKN.Margin = new Padding(4, 3, 4, 3);
             panelMain_RKN.Name = "panelMain_RKN";
-            panelMain_RKN.Size = new Size(1127, 620);
+            panelMain_RKN.Size = new Size(848, 505);
             panelMain_RKN.TabIndex = 18;
             panelMain_RKN.Paint += panelMain_RKN_Paint;
             // 
@@ -426,7 +429,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1381, 647);
+            ClientSize = new Size(1148, 532);
             Controls.Add(panelMain_RKN);
             Controls.Add(toolStripMenu_RKN);
             Controls.Add(flowLayoutPanelLeft_RKN);
@@ -478,5 +481,6 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxSort_RKN;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Panel panelMain_RKN;
+        private ToolTip toolTip_RKN;
     }
 }

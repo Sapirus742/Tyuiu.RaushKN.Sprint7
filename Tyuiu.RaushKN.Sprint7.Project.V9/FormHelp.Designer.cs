@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            buttonOK_RKN = new Button();
             label5 = new Label();
             pictureBox5 = new PictureBox();
             label4 = new Label();
@@ -49,6 +50,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(buttonOK_RKN);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(label4);
@@ -62,8 +64,18 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(501, 445);
+            panel1.Size = new Size(457, 476);
             panel1.TabIndex = 0;
+            // 
+            // buttonOK_RKN
+            // 
+            buttonOK_RKN.Location = new Point(371, 425);
+            buttonOK_RKN.Name = "buttonOK_RKN";
+            buttonOK_RKN.Size = new Size(59, 39);
+            buttonOK_RKN.TabIndex = 10;
+            buttonOK_RKN.Text = "OK";
+            buttonOK_RKN.UseVisualStyleBackColor = true;
+            buttonOK_RKN.Click += buttonOK_RKN_Click;
             // 
             // label5
             // 
@@ -72,7 +84,7 @@
             label5.Name = "label5";
             label5.Size = new Size(371, 45);
             label5.TabIndex = 9;
-            label5.Text = "Кнопка предназначненая для справки о программе.\r\nНажмите на кнопку для просмотра сведенья о программе. После\r\nпросмотра, нажмите на кнопку \"OK\".";
+            label5.Text = "Кнопка справки о программе.\r\nНажмите на кнопку для просмотра сведенья о программе. После\r\nпросмотра, нажмите на кнопку \"OK\".";
             // 
             // pictureBox5
             // 
@@ -89,9 +101,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(79, 278);
             label4.Name = "label4";
-            label4.Size = new Size(383, 45);
+            label4.Size = new Size(373, 45);
             label4.TabIndex = 7;
-            label4.Text = "Кнопка предназначенная для показа статистики фильмов по жанру.\r\nНажмите на кнопку для просмотра статистики. После просмотра \r\nзакройте всплывающее окно.";
+            label4.Text = "Кнопка показа статистики фильмов по жанру.\r\nНажмите на кнопку для просмотра статистики. После просмотра \r\nзакройте всплывающее окно.";
             // 
             // label3
             // 
@@ -100,7 +112,7 @@
             label3.Name = "label3";
             label3.Size = new Size(351, 60);
             label3.TabIndex = 6;
-            label3.Text = "Кнопка предназначена для поиска фильмов.\r\nВ строке \"Поиск\" напишите название нужного фильма, затем\r\nнажмите на кнопку. Для отображения всех фильмов, оставьте\r\nпоисковую строку пустой.";
+            label3.Text = "Кнопка поиска фильмов.\r\nВ строке \"Поиск\" напишите название нужного фильма, затем\r\nнажмите на кнопку. Для отображения всех фильмов, оставьте\r\nпоисковую строку пустой.";
             // 
             // pictureBox4
             // 
@@ -139,7 +151,7 @@
             label2.Name = "label2";
             label2.Size = new Size(368, 45);
             label2.TabIndex = 2;
-            label2.Text = "Кнопка предназначена для удаления фильмов.\r\nНа странице с нужным фильмом нажмите на кнопку, чтобы\r\nудалить его. Затем во всплывающем окне подтвердите решение.";
+            label2.Text = "Кнопка удаления фильмов.\r\nНа странице с нужным фильмом нажмите на кнопку, чтобы\r\nудалить его. Затем во всплывающем окне подтвердите решение.";
             // 
             // label1
             // 
@@ -148,7 +160,7 @@
             label1.Name = "label1";
             label1.Size = new Size(367, 45);
             label1.TabIndex = 1;
-            label1.Text = "Кнопка предназначена для добавления фильмов.\r\nПосле нажатия на кнопку, во всплываещем окне заполните всю \r\nинформацию о фильме. Затем нажмите кнопку \"Добавить\".\r\n";
+            label1.Text = "Кнопка добавления фильмов.\r\nПосле нажатия на кнопку, во всплываещем окне заполните всю \r\nинформацию о фильме. Затем нажмите кнопку \"Добавить\".\r\n";
             // 
             // pictureBox1
             // 
@@ -164,14 +176,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(501, 445);
+            ClientSize = new Size(457, 476);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormHelp";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Руководство пользователя";
+            Text = "Руководство ";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -195,5 +207,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private Button buttonOK_RKN;
     }
 }
