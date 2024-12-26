@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStatistics));
             chartGenreStatistics_RKN = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)chartGenreStatistics_RKN).BeginInit();
             SuspendLayout();
@@ -48,27 +47,26 @@
             chartGenreStatistics_RKN.ChartAreas.Add(chartArea1);
             chartGenreStatistics_RKN.Dock = DockStyle.Fill;
             chartGenreStatistics_RKN.Location = new Point(0, 0);
-            chartGenreStatistics_RKN.Margin = new Padding(2, 2, 2, 2);
+            chartGenreStatistics_RKN.Margin = new Padding(2);
             chartGenreStatistics_RKN.Name = "chartGenreStatistics_RKN";
             series1.ChartArea = "ChartAreaGenre_RKN";
             series1.Name = "Series1";
             chartGenreStatistics_RKN.Series.Add(series1);
-            chartGenreStatistics_RKN.Size = new Size(529, 366);
+            chartGenreStatistics_RKN.Size = new Size(617, 422);
             chartGenreStatistics_RKN.TabIndex = 0;
             chartGenreStatistics_RKN.Click += chart1_Click;
             // 
             // FormStatistics
             // 
-            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(529, 366);
+            ClientSize = new Size(617, 422);
             Controls.Add(chartGenreStatistics_RKN);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 2, 2, 2);
-            MinimumSize = new Size(545, 405);
+            Margin = new Padding(2);
+            MinimumSize = new Size(633, 461);
             Name = "FormStatistics";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Статистика по жанрам";
+            Text = "Статистика";
             ((System.ComponentModel.ISupportInitialize)chartGenreStatistics_RKN).EndInit();
             ResumeLayout(false);
         }

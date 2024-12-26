@@ -189,10 +189,10 @@
             // 
             labelDescriptionText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelDescriptionText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelDescriptionText_RKN.Location = new Point(455, 285);
+            labelDescriptionText_RKN.Location = new Point(455, 275);
             labelDescriptionText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelDescriptionText_RKN.Name = "labelDescriptionText_RKN";
-            labelDescriptionText_RKN.Size = new Size(367, 28);
+            labelDescriptionText_RKN.Size = new Size(367, 158);
             labelDescriptionText_RKN.TabIndex = 17;
             labelDescriptionText_RKN.Text = "-";
             // 
@@ -200,7 +200,7 @@
             // 
             labelRatingText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelRatingText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelRatingText_RKN.Location = new Point(455, 257);
+            labelRatingText_RKN.Location = new Point(455, 247);
             labelRatingText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelRatingText_RKN.Name = "labelRatingText_RKN";
             labelRatingText_RKN.Size = new Size(367, 28);
@@ -319,19 +319,19 @@
             labelGenre_RKN.Name = "labelGenre_RKN";
             labelGenre_RKN.Size = new Size(166, 28);
             labelGenre_RKN.TabIndex = 7;
-            labelGenre_RKN.Text = "Направленность:";
+            labelGenre_RKN.Text = "Тема:";
             labelGenre_RKN.TextAlign = ContentAlignment.MiddleRight;
             // 
             // labelYear_RKN
             // 
             labelYear_RKN.AutoSize = true;
             labelYear_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelYear_RKN.Location = new Point(29, 409);
+            labelYear_RKN.Location = new Point(68, 409);
             labelYear_RKN.Margin = new Padding(2, 0, 2, 0);
             labelYear_RKN.Name = "labelYear_RKN";
-            labelYear_RKN.Size = new Size(127, 24);
+            labelYear_RKN.Size = new Size(117, 24);
             labelYear_RKN.TabIndex = 6;
-            labelYear_RKN.Text = "Дата записи:";
+            labelYear_RKN.Text = "Год записи:";
             // 
             // labelDirectorText_RKN
             // 
@@ -372,7 +372,7 @@
             // 
             labelYearText_RKN.AutoSize = true;
             labelYearText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelYearText_RKN.Location = new Point(160, 409);
+            labelYearText_RKN.Location = new Point(199, 409);
             labelYearText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelYearText_RKN.Name = "labelYearText_RKN";
             labelYearText_RKN.Size = new Size(16, 24);
