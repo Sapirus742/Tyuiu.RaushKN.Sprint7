@@ -63,15 +63,15 @@
             // 
             // textBoxRole_RKN
             // 
-            textBoxRole_RKN.Location = new Point(356, 224);
+            textBoxRole_RKN.Location = new Point(367, 217);
             textBoxRole_RKN.Margin = new Padding(2);
             textBoxRole_RKN.Name = "textBoxRole_RKN";
-            textBoxRole_RKN.Size = new Size(258, 23);
+            textBoxRole_RKN.Size = new Size(247, 23);
             textBoxRole_RKN.TabIndex = 1;
             // 
             // textBoxYear_RKN
             // 
-            textBoxYear_RKN.Location = new Point(356, 56);
+            textBoxYear_RKN.Location = new Point(150, 360);
             textBoxYear_RKN.Margin = new Padding(2);
             textBoxYear_RKN.Name = "textBoxYear_RKN";
             textBoxYear_RKN.Size = new Size(48, 23);
@@ -79,7 +79,7 @@
             // 
             // textBoxDescription_RKN
             // 
-            textBoxDescription_RKN.Location = new Point(356, 264);
+            textBoxDescription_RKN.Location = new Point(356, 255);
             textBoxDescription_RKN.Margin = new Padding(2);
             textBoxDescription_RKN.Name = "textBoxDescription_RKN";
             textBoxDescription_RKN.Size = new Size(258, 23);
@@ -87,7 +87,7 @@
             // 
             // textBoxDirector_RKN
             // 
-            textBoxDirector_RKN.Location = new Point(357, 139);
+            textBoxDirector_RKN.Location = new Point(356, 93);
             textBoxDirector_RKN.Margin = new Padding(2);
             textBoxDirector_RKN.Name = "textBoxDirector_RKN";
             textBoxDirector_RKN.Size = new Size(258, 23);
@@ -95,7 +95,7 @@
             // 
             // textBoxScreenwriter_RKN
             // 
-            textBoxScreenwriter_RKN.Location = new Point(356, 100);
+            textBoxScreenwriter_RKN.Location = new Point(356, 132);
             textBoxScreenwriter_RKN.Margin = new Padding(2);
             textBoxScreenwriter_RKN.Name = "textBoxScreenwriter_RKN";
             textBoxScreenwriter_RKN.Size = new Size(258, 23);
@@ -103,7 +103,7 @@
             // 
             // textBoxRating_RKN
             // 
-            textBoxRating_RKN.Location = new Point(527, 184);
+            textBoxRating_RKN.Location = new Point(540, 174);
             textBoxRating_RKN.Margin = new Padding(2);
             textBoxRating_RKN.Name = "textBoxRating_RKN";
             textBoxRating_RKN.Size = new Size(88, 23);
@@ -111,16 +111,16 @@
             // 
             // textBoxCountry_RKN
             // 
-            textBoxCountry_RKN.Location = new Point(356, 183);
+            textBoxCountry_RKN.Location = new Point(352, 174);
             textBoxCountry_RKN.Margin = new Padding(2);
             textBoxCountry_RKN.Name = "textBoxCountry_RKN";
-            textBoxCountry_RKN.Size = new Size(88, 23);
+            textBoxCountry_RKN.Size = new Size(87, 23);
             textBoxCountry_RKN.TabIndex = 8;
             // 
             // buttonAdd_RKN
             // 
             buttonAdd_RKN.Cursor = Cursors.Hand;
-            buttonAdd_RKN.Location = new Point(356, 314);
+            buttonAdd_RKN.Location = new Point(313, 314);
             buttonAdd_RKN.Margin = new Padding(2);
             buttonAdd_RKN.Name = "buttonAdd_RKN";
             buttonAdd_RKN.Size = new Size(258, 37);
@@ -146,27 +146,27 @@
             // 
             // labelYear_RKN
             // 
-            labelYear_RKN.Location = new Point(273, 57);
+            labelYear_RKN.Location = new Point(67, 361);
             labelYear_RKN.Margin = new Padding(2, 0, 2, 0);
             labelYear_RKN.Name = "labelYear_RKN";
             labelYear_RKN.Size = new Size(78, 22);
             labelYear_RKN.TabIndex = 13;
-            labelYear_RKN.Text = "Год:";
+            labelYear_RKN.Text = "Дата записи:";
             labelYear_RKN.TextAlign = ContentAlignment.MiddleRight;
             // 
             // labelGenre_RKN
             // 
-            labelGenre_RKN.Location = new Point(390, 56);
+            labelGenre_RKN.Location = new Point(289, 52);
             labelGenre_RKN.Margin = new Padding(2, 0, 2, 0);
             labelGenre_RKN.Name = "labelGenre_RKN";
-            labelGenre_RKN.Size = new Size(88, 22);
+            labelGenre_RKN.Size = new Size(102, 22);
             labelGenre_RKN.TabIndex = 14;
-            labelGenre_RKN.Text = "Жанр:";
+            labelGenre_RKN.Text = "Направленность:";
             labelGenre_RKN.TextAlign = ContentAlignment.MiddleRight;
             // 
             // labelDirector_RKN
             // 
-            labelDirector_RKN.Location = new Point(274, 139);
+            labelDirector_RKN.Location = new Point(275, 92);
             labelDirector_RKN.Margin = new Padding(2, 0, 2, 0);
             labelDirector_RKN.Name = "labelDirector_RKN";
             labelDirector_RKN.Size = new Size(77, 22);
@@ -176,47 +176,47 @@
             // 
             // labelScreenwriter_RKN
             // 
-            labelScreenwriter_RKN.Location = new Point(273, 100);
+            labelScreenwriter_RKN.Location = new Point(275, 131);
             labelScreenwriter_RKN.Margin = new Padding(2, 0, 2, 0);
             labelScreenwriter_RKN.Name = "labelScreenwriter_RKN";
             labelScreenwriter_RKN.Size = new Size(77, 22);
             labelScreenwriter_RKN.TabIndex = 16;
-            labelScreenwriter_RKN.Text = "Сценарист:";
+            labelScreenwriter_RKN.Text = "Стоимость:";
             labelScreenwriter_RKN.TextAlign = ContentAlignment.MiddleRight;
             // 
             // labelCountry_RKN
             // 
-            labelCountry_RKN.Location = new Point(273, 183);
+            labelCountry_RKN.Location = new Point(284, 173);
             labelCountry_RKN.Margin = new Padding(2, 0, 2, 0);
             labelCountry_RKN.Name = "labelCountry_RKN";
-            labelCountry_RKN.Size = new Size(78, 22);
+            labelCountry_RKN.Size = new Size(64, 22);
             labelCountry_RKN.TabIndex = 17;
             labelCountry_RKN.Text = "Страна:";
             labelCountry_RKN.TextAlign = ContentAlignment.MiddleRight;
             // 
             // labelRating_RKN
             // 
-            labelRating_RKN.Location = new Point(432, 184);
+            labelRating_RKN.Location = new Point(443, 175);
             labelRating_RKN.Margin = new Padding(2, 0, 2, 0);
             labelRating_RKN.Name = "labelRating_RKN";
             labelRating_RKN.Size = new Size(88, 22);
             labelRating_RKN.TabIndex = 18;
-            labelRating_RKN.Text = "Оценка:";
+            labelRating_RKN.Text = "Длительность:";
             labelRating_RKN.TextAlign = ContentAlignment.MiddleRight;
             // 
             // labelRole_RKN
             // 
-            labelRole_RKN.Location = new Point(273, 224);
+            labelRole_RKN.Location = new Point(276, 216);
             labelRole_RKN.Margin = new Padding(2, 0, 2, 0);
             labelRole_RKN.Name = "labelRole_RKN";
-            labelRole_RKN.Size = new Size(77, 22);
+            labelRole_RKN.Size = new Size(87, 22);
             labelRole_RKN.TabIndex = 19;
-            labelRole_RKN.Text = "В ролях:";
-            labelRole_RKN.TextAlign = ContentAlignment.MiddleRight;
+            labelRole_RKN.Text = "ФИО актёров:";
+            labelRole_RKN.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelDescription_RKN
             // 
-            labelDescription_RKN.Location = new Point(273, 262);
+            labelDescription_RKN.Location = new Point(273, 255);
             labelDescription_RKN.Margin = new Padding(2, 0, 2, 0);
             labelDescription_RKN.Name = "labelDescription_RKN";
             labelDescription_RKN.Size = new Size(77, 22);
@@ -229,11 +229,11 @@
             comboBoxGenre_RKN.DisplayMember = "0";
             comboBoxGenre_RKN.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxGenre_RKN.FormattingEnabled = true;
-            comboBoxGenre_RKN.Items.AddRange(new object[] { "Боевик", "Детектив", "Драма", "Исторический фильм", "Комедия", "Мюзикл", "Фантастика", "Хоррор", "Романтика" });
-            comboBoxGenre_RKN.Location = new Point(482, 56);
+            comboBoxGenre_RKN.Items.AddRange(new object[] { "Боевик", "Комедия", "Мюзикл", "Фантастика", "Хоррор", "Реклама", "Благотворительность", "Романтика" });
+            comboBoxGenre_RKN.Location = new Point(395, 53);
             comboBoxGenre_RKN.Margin = new Padding(2);
             comboBoxGenre_RKN.Name = "comboBoxGenre_RKN";
-            comboBoxGenre_RKN.Size = new Size(132, 23);
+            comboBoxGenre_RKN.Size = new Size(146, 23);
             comboBoxGenre_RKN.TabIndex = 22;
             comboBoxGenre_RKN.SelectedIndexChanged += comboBoxGenre_RKN_SelectedIndexChanged;
             // 
@@ -255,7 +255,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(625, 367);
+            ClientSize = new Size(639, 391);
             Controls.Add(comboBoxGenre_RKN);
             Controls.Add(labelDescription_RKN);
             Controls.Add(labelRole_RKN);
