@@ -139,7 +139,8 @@
             toolStripButtonHelp_RKN.ImageTransparentColor = Color.Magenta;
             toolStripButtonHelp_RKN.Name = "toolStripButtonHelp_RKN";
             toolStripButtonHelp_RKN.Size = new Size(24, 24);
-            toolStripButtonHelp_RKN.Text = "Руководство пользователя";
+            toolStripButtonHelp_RKN.Text = "Руководство";
+            toolStripButtonHelp_RKN.ToolTipText = "Руководство";
             toolStripButtonHelp_RKN.Click += toolStripButtonHelp_RKN_Click_1;
             // 
             // toolStripTextBoxSearch_RKN
@@ -148,6 +149,7 @@
             toolStripTextBoxSearch_RKN.Name = "toolStripTextBoxSearch_RKN";
             toolStripTextBoxSearch_RKN.Size = new Size(164, 27);
             toolStripTextBoxSearch_RKN.Text = "Поиск...";
+            toolStripTextBoxSearch_RKN.ToolTipText = "Поиск";
             toolStripTextBoxSearch_RKN.Enter += toolStripTextBoxSearch_RKN_Enter;
             toolStripTextBoxSearch_RKN.Leave += toolStripTextBoxSearch_RKN_Leave;
             // 
@@ -191,7 +193,7 @@
             // labelScreenwriter_RKN
             // 
             labelScreenwriter_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelScreenwriter_RKN.Location = new Point(308, 140);
+            labelScreenwriter_RKN.Location = new Point(307, 167);
             labelScreenwriter_RKN.Margin = new Padding(2, 0, 2, 0);
             labelScreenwriter_RKN.Name = "labelScreenwriter_RKN";
             labelScreenwriter_RKN.Size = new Size(131, 28);
@@ -202,7 +204,7 @@
             // labelDirector_RKN
             // 
             labelDirector_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelDirector_RKN.Location = new Point(308, 112);
+            labelDirector_RKN.Location = new Point(307, 139);
             labelDirector_RKN.Margin = new Padding(2, 0, 2, 0);
             labelDirector_RKN.Name = "labelDirector_RKN";
             labelDirector_RKN.Size = new Size(131, 28);
@@ -213,7 +215,7 @@
             // labelGenre_RKN
             // 
             labelGenre_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelGenre_RKN.Location = new Point(308, 85);
+            labelGenre_RKN.Location = new Point(307, 111);
             labelGenre_RKN.Margin = new Padding(2, 0, 2, 0);
             labelGenre_RKN.Name = "labelGenre_RKN";
             labelGenre_RKN.Size = new Size(131, 28);
@@ -225,7 +227,7 @@
             // 
             labelYear_RKN.AutoSize = true;
             labelYear_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelYear_RKN.Location = new Point(79, 362);
+            labelYear_RKN.Location = new Point(104, 410);
             labelYear_RKN.Margin = new Padding(2, 0, 2, 0);
             labelYear_RKN.Name = "labelYear_RKN";
             labelYear_RKN.Size = new Size(49, 24);
@@ -236,7 +238,7 @@
             // 
             labelYearText_RKN.AutoSize = true;
             labelYearText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelYearText_RKN.Location = new Point(130, 362);
+            labelYearText_RKN.Location = new Point(155, 410);
             labelYearText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelYearText_RKN.Name = "labelYearText_RKN";
             labelYearText_RKN.Size = new Size(16, 24);
@@ -247,7 +249,7 @@
             // 
             labelGenreText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelGenreText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelGenreText_RKN.Location = new Point(436, 85);
+            labelGenreText_RKN.Location = new Point(435, 111);
             labelGenreText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelGenreText_RKN.Name = "labelGenreText_RKN";
             labelGenreText_RKN.Size = new Size(399, 28);
@@ -259,7 +261,7 @@
             // 
             labelDirectorText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelDirectorText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelDirectorText_RKN.Location = new Point(436, 112);
+            labelDirectorText_RKN.Location = new Point(435, 139);
             labelDirectorText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelDirectorText_RKN.Name = "labelDirectorText_RKN";
             labelDirectorText_RKN.Size = new Size(399, 28);
@@ -271,7 +273,7 @@
             // 
             labelScreenwriterText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelScreenwriterText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelScreenwriterText_RKN.Location = new Point(436, 140);
+            labelScreenwriterText_RKN.Location = new Point(435, 167);
             labelScreenwriterText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelScreenwriterText_RKN.Name = "labelScreenwriterText_RKN";
             labelScreenwriterText_RKN.Size = new Size(399, 28);
@@ -283,7 +285,7 @@
             // 
             labelRoleText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelRoleText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelRoleText_RKN.Location = new Point(436, 167);
+            labelRoleText_RKN.Location = new Point(435, 195);
             labelRoleText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelRoleText_RKN.Name = "labelRoleText_RKN";
             labelRoleText_RKN.Size = new Size(399, 28);
@@ -295,7 +297,7 @@
             // 
             labelCountryText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelCountryText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelCountryText_RKN.Location = new Point(436, 194);
+            labelCountryText_RKN.Location = new Point(435, 219);
             labelCountryText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelCountryText_RKN.Name = "labelCountryText_RKN";
             labelCountryText_RKN.Size = new Size(399, 28);
@@ -307,7 +309,7 @@
             // 
             labelRatingText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelRatingText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelRatingText_RKN.Location = new Point(436, 220);
+            labelRatingText_RKN.Location = new Point(435, 249);
             labelRatingText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelRatingText_RKN.Name = "labelRatingText_RKN";
             labelRatingText_RKN.Size = new Size(399, 28);
@@ -319,7 +321,7 @@
             // 
             labelDescriptionText_RKN.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelDescriptionText_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelDescriptionText_RKN.Location = new Point(436, 248);
+            labelDescriptionText_RKN.Location = new Point(435, 277);
             labelDescriptionText_RKN.Margin = new Padding(2, 0, 2, 0);
             labelDescriptionText_RKN.Name = "labelDescriptionText_RKN";
             labelDescriptionText_RKN.Size = new Size(399, 28);
@@ -329,7 +331,7 @@
             // labelRating_RKN
             // 
             labelRating_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelRating_RKN.Location = new Point(308, 220);
+            labelRating_RKN.Location = new Point(307, 247);
             labelRating_RKN.Margin = new Padding(2, 0, 2, 0);
             labelRating_RKN.Name = "labelRating_RKN";
             labelRating_RKN.Size = new Size(131, 28);
@@ -340,7 +342,7 @@
             // labelCountry_RKN
             // 
             labelCountry_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelCountry_RKN.Location = new Point(308, 194);
+            labelCountry_RKN.Location = new Point(307, 221);
             labelCountry_RKN.Margin = new Padding(2, 0, 2, 0);
             labelCountry_RKN.Name = "labelCountry_RKN";
             labelCountry_RKN.Size = new Size(131, 28);
@@ -364,7 +366,7 @@
             // labelRole_RKN
             // 
             labelRole_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelRole_RKN.Location = new Point(308, 167);
+            labelRole_RKN.Location = new Point(307, 195);
             labelRole_RKN.Margin = new Padding(2, 0, 2, 0);
             labelRole_RKN.Name = "labelRole_RKN";
             labelRole_RKN.Size = new Size(131, 28);
@@ -375,7 +377,7 @@
             // labelDescription_RKN
             // 
             labelDescription_RKN.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            labelDescription_RKN.Location = new Point(308, 248);
+            labelDescription_RKN.Location = new Point(307, 275);
             labelDescription_RKN.Margin = new Padding(2, 0, 2, 0);
             labelDescription_RKN.Name = "labelDescription_RKN";
             labelDescription_RKN.Size = new Size(131, 28);
@@ -387,7 +389,7 @@
             // 
             pictureBoxPreview_RKN.BackColor = Color.FromArgb(255, 224, 192);
             pictureBoxPreview_RKN.Image = (Image)resources.GetObject("pictureBoxPreview_RKN.Image");
-            pictureBoxPreview_RKN.Location = new Point(23, 10);
+            pictureBoxPreview_RKN.Location = new Point(48, 58);
             pictureBoxPreview_RKN.Margin = new Padding(2);
             pictureBoxPreview_RKN.Name = "pictureBoxPreview_RKN";
             pictureBoxPreview_RKN.Size = new Size(233, 340);
