@@ -183,7 +183,7 @@ namespace Tyuiu.RaushKN.Sprint7.Project.V9
 
         private void OpenFilm(Object sender, EventArgs e)
         {
-            string[] genres = { "Боевик", "Детектив", "Драма", "Исторический фильм", "Комедия", "Мюзикл", "Фантастика", "Хоррор", "Романтика"};
+            string[] genres = { "Боевик", "Детектив", "Драма", "Исторический фильм", "Комедия", "Мюзикл", "Фантастика", "Хоррор", "Романтика" };
             Button b = (Button)sender;
             toolStripButtonDelete_RKN.Enabled = true;
             openedFilm = b.TabIndex;

@@ -172,6 +172,7 @@
             toolStripButtonStat_RKN.Name = "toolStripButtonStat_RKN";
             toolStripButtonStat_RKN.Size = new Size(24, 24);
             toolStripButtonStat_RKN.Text = "Статистика по жанрам";
+            toolStripButtonStat_RKN.Click += toolStripButtonStat_RKN_Click_3;
             // 
             // flowLayoutPanelLeft_RKN
             // 
